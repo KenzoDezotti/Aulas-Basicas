@@ -1,0 +1,7 @@
+frase = input('digite seu nome: ')
+x = frase.upper()
+y = frase.lower()
+a = frase.split()
+c = len(a[0])
+v = len(frase.replace(' ',''))
+print(x,y,c,v)

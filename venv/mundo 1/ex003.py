@@ -1,0 +1,5 @@
+x=input('digite algo')
+print(x)
+print('o que você digitou é uma letra?', x.isalpha())
+print('o que você digitou é um numero?', x.isdecimal())
+print("o que você digitou é algo?", x.isprintable())
