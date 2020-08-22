@@ -1,6 +1,6 @@
 def trobarra(numero):
     """troca / por \ e  tem q apagar os espaços depois"""
-    num=numero.replace('/',"\ ")
+    num=numero.replace('/',"\\")
     return num
 def quadro(escrita):
     '''faz um quadro de apresentação para a escrita'''
