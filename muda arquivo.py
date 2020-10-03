@@ -1,4 +1,3 @@
-import pandas
 def escrivao(dados):
     x=open("online.txt",'w+')
     x.write(dados)
