@@ -7,7 +7,7 @@
 #sopa=BeautifulSoup(req.content, 'html.parser')
 
 #print(req.content)
-q=open('C:/Users/Arthur/Desktop/anonymous_privacidade_online.txt','a+')
+q=open('equivalencia quimica.txt','a+')
 q.close()
-q=open('C:/Users/Arthur/Desktop/anonymous_privacidade_online.txt','r+')
+q=open('equivalencia quimica.txt','r+')
 print(q.read())
