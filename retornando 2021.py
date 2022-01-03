@@ -23,18 +23,6 @@ def contador(a,b,c):
     print("FIM!")
     botalinha(para2)
 
-"""
-print("CONTAGEM DE 1 ATE 10 DE 1 EM 1")
-contador(1,10,1)
-print("CONTAGEM DE 10 ATE 0 DE 2 EM 2")
-contador(10,-1,2)
-print("sua vez seu fudido:")
-inicio = int(input("inicio: "))
-fim = int(input("fim: "))
-passo = int(input("passo: "))
-contador(inicio, fim, passo)
-"""
-
 def descobre_maior(*a):
     from time import sleep
 
@@ -76,7 +64,12 @@ def soma_par(a):
             soma += i
     print(soma)
 
+"""aula ignorancia zero"""
+"""aula 30-40"""
 
-arquivo = lista()
-print(arquivo)
-soma_par(arquivo)
+
+
+
+
+
+
