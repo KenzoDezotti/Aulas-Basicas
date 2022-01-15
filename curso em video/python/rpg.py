@@ -144,7 +144,7 @@ def criainimigo(player):
         adversarios[j] = inimigo(adversarios[j])
     return adversarios
 
-#recebe o nome do player, busca e cospe jogador já carregado
+#recebe o nome do player, busca e libera jogador já carregado
 def jogo_load(player):
     '''pega o jogador e salva nome e lvl para jogos futuros'''
     arquivo = open("jogo.txt", 'r')
