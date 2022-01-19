@@ -1,5 +1,8 @@
 #aula sobre criptografia de cesar
 
+from pickle import TRUE
+
+
 TAM_MAX_CH = 26
 
 def recebeModo():
@@ -10,13 +13,11 @@ def recebeModo():
     valido=False
     while True:
         modo = input("criptografar ou decifar? \n").lower()
-        if modo in ("criptografar decifrar"):
+        if modo is ("criptografar") or ("decifrar"):
             return modo
         else:
             print("Não entendi \n entre com 'criptografar' ou 'decriptografar'")
-        
-        
-        
+               
 def recebeChave(modo):
     """Função que pede o valor da chave para o usuário
     e devolve a chave caso o valor desta esteja adequado """
@@ -25,7 +26,6 @@ def recebeChave(modo):
         chave = int(input("entre com o numero da chave (1 a 26): "))
         if 0 < chave <= TAM_MAX_CH:
             return chave
-
 
 def geraMsgTraduzida(modo, mensagem, chave):
     """
@@ -43,10 +43,16 @@ def geraMsgTraduzida(modo, mensagem, chave):
             traducao += chr(num)
         else:traducao += simbolo
     return traducao
-x = geraMsgTraduzida("decifrar","tbmwf, tbmwf", 1)
-print(x)
+
+def main():
+    while TRUE:
+        print("CIFRA DE CÉSAR DO KENZO")
+        modo = recebeModo()
+        chave = recebeChave(modo)
+        mensagem = input(f"qual a frase eu devo {modo}? \n")
+        mensagem_trad = geraMsgTraduzida(modo, mensagem, chave)
+        print(mensagem_trad)
 
 
-
-
+main()
 
