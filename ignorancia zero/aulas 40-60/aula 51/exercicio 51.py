@@ -7,7 +7,7 @@ baixado da Internet, ele conseguiu gerar o seguinte arquivo, chamado
 "usuarios.txt":"""
 
 def cabeça():
-    """imprime o que é recebido"""
+    """imprime o cabeçalho"""
     print('')
     cabecalho = "ACME Inc."
     cabecalhoDois = "Uso do espaço em disco pelos usuarios"
