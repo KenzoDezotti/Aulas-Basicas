@@ -11,32 +11,40 @@ def Salvar(player_vida, player_sp, inimigos):
     """
     Função usada para salvar o jogo
     """
-    pass
-    arquivo = open("jogo.txt","w")
-    arquivo.writelines(str(player_vida))
-    arquivo.writelines("\n")
-    arquivo.writelines(str(player_sp))
-    arquivo.writelines("\n")
-    for i in inimigos:    
-        arquivo.writelines(str(i))
+    arquivo = open("ignorancia zero/aulas 40-60/aula 52.py/jogo.txt","w")
+    arquivo.write(f"{player_vida}")
+    arquivo.write("\n")
+    arquivo.write(f"{player_sp}")
+    arquivo.write("\n")
 
-
+    for i in inimigos:
+        inimigo = ""
+        for j in i:
+            inimigo += str(j)+" "
+        arquivo.write(inimigo)
+        arquivo.write("\n")
+    
 def CarregaJogo():
     """
     Função que carrega um jogo
     """
-    arquivo = open("jogo.txt","r")
-    dado = ()
+    arquivo = open("ignorancia zero/aulas 40-60/aula 52.py/jogo.txt","r")
     contador = 0
     inimigo = []
     for i in arquivo:
-        if contador>=2:
-            inimigo.append(i)
-        else:
-            dado.append(i)
-    dado.append(inimigo)
-    print(dado)
-    return dado#player_vida, player_sp, inimigos
+        contador+=1
+        if contador == 1:
+            player_vida = int(i) 
+        elif contador == 2: 
+            player_sp = int(i)
+            i = i.split()
+            i.pop(len(i)-1)
+        else: 
+            inimigo.append([int(i.split()[0]), int(i.split()[1])])
+    print(inimigo)
+    return player_vida, player_sp, inimigo
+
+
 
 def main():
     """
