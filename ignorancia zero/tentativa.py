@@ -20,13 +20,4 @@ def JogarNovamente():
     jogar novamente e retorna um booleano representando
     a resposta
     """
-    """    while True:
-        if novamente.upper().startswith("S"):
-            return True
-        
-        elif novamente.upper().startswith("N"):
-            return False
-
-        else:print("não consegui entender, pode digitar novamente?")
-    """
     return (input("deseja jogar novamente (S/N)?")).upper().startswith('S')
