@@ -17,7 +17,7 @@ def RecebeFrase():
     Das letras que recebemos temos que garantir nenhuma tenha
     acento ou ç
     """
-
+    
 def ProcuraPalavra(dicionário, palavra):
     """
     Procura as possíveis palavras para substituir
@@ -65,9 +65,7 @@ def GeraFrasesPossíveis(candidatas_totais):
 
     print("Gerando Lista de Palavras Candidatas...")
     
-    from auxiliar import funcao_auxiliar
 
-    funcao_auxiliar(candidatas_totais)     
 
 def main():
     """
