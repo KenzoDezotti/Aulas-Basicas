@@ -12,3 +12,4 @@ print(contatos["lambda"])
 
 #para utilizá-la usamos:
 print(contatos["lambda"](3))
+print(len(contatos))
