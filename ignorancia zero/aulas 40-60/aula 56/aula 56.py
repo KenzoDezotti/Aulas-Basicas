@@ -35,6 +35,4 @@ contato2.clear()
 print(contato2)
 
 
-#
-contato.setdefault()
 
