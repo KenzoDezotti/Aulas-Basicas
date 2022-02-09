@@ -1,9 +1,4 @@
 """primeira aula de POO (programação orientada a objetos)"""
-from importlib.util import set_loader
-from typing_extensions import Self
-
-from soupsieve import select
-
 
 class Kenzo (object):
     def __init__(self):
@@ -15,6 +10,7 @@ class Kenzo (object):
 
 
 class Quadrado(object):
+    """exercicio 1 da aula 59"""
     def __init__(self, lado):
         self.lado = lado
     

@@ -1,4 +1,5 @@
 class Humano(object):
+    """exercicio 3 da aula 59"""
     def __init__(self, nome, idade, peso, altura):
         self.nome = nome
         self.idade = idade
