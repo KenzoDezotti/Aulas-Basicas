@@ -12,6 +12,7 @@ Escreva três classes:
 Subclasses da classe ObjetoGráfico que possuam todas métodos area e perimetro  
 """
 
+
 from xml.etree.ElementTree import PI
 
 
