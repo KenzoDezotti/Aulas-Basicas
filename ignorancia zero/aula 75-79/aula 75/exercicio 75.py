@@ -27,6 +27,7 @@ def Leitor():
         nome,rg,cpf = arruma(linha)
         print(f"encontrei o usuario {nome}, ele tem o CPF {cpf} e o RG {rg}")
     arq.close()
+
 def arruma(info):
     nome, rg, cpf = info
     nome = nome.decode()
@@ -61,6 +62,7 @@ def Escritor(info):
     arq.write()
     arq.write("\n")
     arq.close()
+
 def main():
     print("BEM VINDO AO CADASTRO DE DADOS DO TUTU")
     LeOuEscreve()
