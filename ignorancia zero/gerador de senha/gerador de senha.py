@@ -34,6 +34,12 @@ class CriadorDeSenha():
 def Quadro():
     """cria tudo relacionado ao GUI"""
     quadro = Tk()
+    
+    quadro.title("gerador e leitor de senha")
+
+
+
+
 
     quadro.mainloop()
 
