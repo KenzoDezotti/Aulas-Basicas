@@ -64,12 +64,3 @@ def soma_par(a):
             soma += i
     print(soma)
 
-"""aula ignorancia zero"""
-"""aula 30-40"""
-
-
-
-
-
-
-
