@@ -1,5 +1,6 @@
 from tkinter import *
 import shelve
+from urllib.request import urlopen
 
 class ProgramaCadastra(object):
     '''programa para cadastrar usuario e senhas de sites'''
@@ -8,16 +9,29 @@ class ProgramaCadastra(object):
         self.quadro = quadro
         quadro.geometry("300x200")
         self.quadro.title("cadastro de usuarios")
-        self.txt_site = Label(self.quadro,text="SITE")
-        self.txt_usuario = Label(self.quadro, text="USUARIO")
-        self.entrada_site = Entry(self.quadro)
-        self.entrada_usuario =Entry(self.quadro)
-        self.txt_senha = Label(self.quadro, text="SENHA")
-        self.entrada_senha =Entry(self.quadro)
-        self.botao_cadastra = Button(self.quadro, text="CADASTRAR NOVO",command=self.CadastroGeral)
-        self.botao_confere = Button(self.quadro, text="MOSTRAR SENHA",command=self.ConfereCadastro)
-        self.resposta = Label(self.quadro,text="        ")
+        
+        #parte dos quadros
+        self.quadro_site = Frame(self.quadro)
+        self.quadro_usuario = Frame(self.quadro)
+        self.quadro_senha = Frame(self.quadro)
+        self.quadro_botao = Frame(self.quadro)
 
+        #quadro site
+        self.txt_site = Label(self.quadro_site,text="SITE")
+        self.entrada_site = Entry(self.quadro_site)
+        #quadro usuario
+        self.txt_usuario = Label(self.quadro_usuario, text="USUARIO")        
+        self.entrada_usuario =Entry(self.quadro_usuario)
+        #quadro senhas
+        self.txt_senha = Label(self.quadro_senha, text="SENHA")
+        self.entrada_senha =Entry(self.quadro_senha)
+        #quadro cadastra
+        self.botao_cadastra = Button(self.quadro_botao, text="CADASTRAR NOVO",command=self.CadastroGeral)
+        self.botao_confere = Button(self.quadro_botao, text="MOSTRAR SENHA",command=self.ConfereCadastro)
+        
+        self.resposta = Label(self.quadro_botao,text="        ")
+        
+        #parte dos pack
         self.txt_site.pack()
         self.entrada_site.pack()
         self.txt_usuario.pack()
@@ -28,6 +42,11 @@ class ProgramaCadastra(object):
         self.botao_cadastra.pack(side=RIGHT)
         self.botao_confere.pack(side=LEFT)
         
+        self.quadro_site.pack()
+        self.quadro_usuario.pack()
+        self.quadro_senha.pack()
+        self.quadro_botao.pack()
+
     def CadastroGeral(self):
         """salva usuario, senha e site em um db usando o shelve"""
         try: 
@@ -51,7 +70,7 @@ class ProgramaCadastra(object):
         db = shelve.open("usuarios.db")
         if self.entrada_site.get() in db.keys():
             self.resposta["text"] = f'usuario:{db[self.entrada_site.get()]}\n senha:{db[db[self.entrada_site.get()]]}'
-            #gambiarra pois usei o nome de usuario como chave para a senha dentro do mesmo db kkkkk
+            #gambiarra, pois usei o nome de usuario como chave para a senha dentro do mesmo db kkkkk
             self.resposta['fg'] = 'green'
         else:
             self.resposta['text'] = 'NAO ENCONTREI NADA'
