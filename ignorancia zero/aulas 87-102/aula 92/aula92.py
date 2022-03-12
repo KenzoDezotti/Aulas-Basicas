@@ -9,7 +9,7 @@ class ProgramaCadastra(object):
 
     def __init__(self, quadro):
         self.quadro = quadro
-        self.imagem = PhotoImage(file="ignorancia zero/aulas 87-102/aula 92/bg_python.gif")
+        self.imagem = PhotoImage(file="Aulas-Basicas/ignorancia zero/aulas 87-102/aula 92/bg_python.gif")
 
         #self.quadro.geometry("400x200")
         self.quadro.title("cadastro de usuarios")
@@ -26,7 +26,7 @@ class ProgramaCadastra(object):
         self.txt_usuario = Label(self.quadro,text="usuario")
         self.txt_senha = Label(self.quadro, text="senha")
         self.entrada_usuario = Entry(self.quadro)
-        self.entrada_senha =Entry(self.quadro)
+        self.entrada_senha =Entry(self.quadro,show="*")
         self.botao_cadastra = Button(self.quadro, text="cadastrar",command=self.CadastroGeral,width = 20)
         self.botao_confere = Button(self.quadro, text="entrar",command=self.ConfereCadastro,width = 20)
         self.resposta = Label(self.quadro,pady=20)
