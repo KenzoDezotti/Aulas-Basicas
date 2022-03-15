@@ -7,8 +7,8 @@ from webob import year
 #    time.sleep(1)
 #   print(time,time.asctime())
 
-tempo = time.struct_time()
-print(x)
+tempo = time.localtime().tm_year
+print(tempo)
 
 
 
