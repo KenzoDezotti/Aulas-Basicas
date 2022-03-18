@@ -13,8 +13,6 @@ Subclasses da classe ObjetoGráfico que possuam todas métodos area e perimetro
 """
 
 
-from xml.etree.ElementTree import PI
-
 
 class ObjetoGrafico(object):
     def __init__(self, cor_de_preenchimento, preenchida, cor_de_contorno):
