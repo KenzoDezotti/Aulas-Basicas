@@ -1,7 +1,7 @@
 """aula tkinter 
 usando frames"""
 
-from email.mime import image
+
 from tkinter import *
 import shelve
 
